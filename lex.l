@@ -1,6 +1,6 @@
 %{
 #include <stdio.h>
-#include "cal.tab.h"
+#include "parser.tab.h"
 #define OTHER 253
 %}
 
