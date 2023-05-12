@@ -35,6 +35,14 @@ expr : expr '+' expr       { $$ = $1 + $3; }
 
 void yyerror(char *msg)
 {
+  FILE* ret;
+  ret = fopen("output.txt", "a");
+  if(ret == NULL){
+    printf("파일 열기 실패\n");
+    return;
+  }
+  fprintf(ret, "error\n");
+  fclose(ret);
   printf("%s\n", msg);
 }
 
